@@ -1,0 +1,21 @@
+FROM node:16.15.0 as build-stage
+
+ARG API_URL
+ENV API_URL ${API_URL}
+ARG GTM_ID
+ENV GTM_ID ${GTM_ID}
+ARG AUTH_API_URL
+ENV AUTH_API_URL ${AUTH_API_URL}
+ARG PAY_API_URL
+ENV PAY_API_URL ${PAY_API_URL}
+ENV NITRO_PORT 22001
+ENV NODE_TLS_REJECT_UNAUTHORIZED 0
+
+WORKDIR /www
+COPY . ./
+RUN yarn install
+RUN yarn build
+
+ENV HOST 0.0.0.0
+EXPOSE 22001
+CMD ["node", ".output/server/index.mjs", "--max_old_space_size=10240"]
