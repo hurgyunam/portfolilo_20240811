@@ -1,0 +1,71 @@
+.tableList_wrap {
+  .title {
+    padding: 0 16px;
+    .title_list_wrap {
+      position: relative;
+      white-space: nowrap;
+      .title_list {
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $lightGray;
+        cursor: pointer;
+        &.active {
+          color: $main_font_color;
+          font-weight: 600;
+        }
+      }
+      .activeStick {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        width: 140px;
+        height: 2px;
+        background: $main_font_color;
+        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+    }
+  }
+  .mentorList {
+    margin-top: 10px;
+    .swiper_wrap {
+      position: relative;
+      .swiper {
+        overflow: hidden;
+        .swiper-wrapper {
+          .swiper-slide {
+            width: 100%;
+            .inner {
+            }
+          }
+        }
+      }
+      // >.button {
+      //   display: block;
+      //   width: auto;
+      //   height: auto;
+      //   background: transparent;
+      //   margin: 0;
+      //   top: -48px;
+      //   &:active {
+      //     i {
+      //       color: $lightGray;
+      //     }
+      //   }
+      //   &.tableList-button-prev {
+      //     left: auto;
+      //     right: 50px;
+      //   }
+      //   &.tableList-button-next {
+      //     right: 0;
+      //   }
+      //   i {
+      //     font-size: 28px;
+      //     color: $main_font_color;
+      //   }
+      // }
+    }//swiper_wrap
+  }//mentorList
+}

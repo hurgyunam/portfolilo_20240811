@@ -1,0 +1,41 @@
+.todayMentor_wrap {
+  position: relative;
+  .swiper {
+    overflow: hidden;
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 100%;
+        .inner {
+          a {
+            width: 100%;
+            display: block;
+            img {
+              display: block;
+              width: 100%;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+  .todayMentor_pagination {
+    @include flex_aline_center();
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    >span {
+      display: block;
+      margin: 0 2px;
+      width: 8px;
+      height: 8px;
+      background: $white;
+      border-radius: 10px;
+      transition: all 0.4s ease-in-out;
+      // &.swiper-pagination-bullet-active {
+      //   width: 16px;
+      // }
+    }
+  }
+}

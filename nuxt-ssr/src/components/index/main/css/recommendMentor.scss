@@ -1,0 +1,111 @@
+.recommendMentor_wrap {
+  .title {
+    width: 100%;
+    .title_list_wrap {
+      position: relative;
+      padding: 0 16px;
+      white-space: nowrap;
+      overflow-x: auto;
+      font-size: 0;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .title_list {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $lightGray;
+        cursor: pointer;
+        &.active {
+          color: $main_font_color;
+          font-weight: 600;
+        }
+        .list_inner {
+          width: 100%;
+          margin-bottom: 5px;
+        }
+      }
+      .activeStick {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        width: 124px;
+        height: 2px;
+        background: $main_font_color;
+        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+    }
+  }
+  .mentorList {
+    margin-top: 10px;
+    .swiper_wrap {
+      width: 100%;
+      .swiper {
+        animation: opacity 0.5s ease-in-out;
+        height: auto;
+        padding: 0 16px;
+        white-space: nowrap;
+        overflow-x: auto;
+        font-size: 0;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .inner {
+          display: inline-block;
+          width: 44%;
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            .contentImg {
+              border-radius: 10px;
+              overflow: hidden;
+              img {
+                display: block;
+                width: 100%;
+              }
+            }
+          }
+          .text {
+            margin-top: 10px;
+            .mentor {
+              @include flex_aline_center();
+              .mentorImg {
+                width: 17px;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                  width: 100%;
+                  display: block;
+                }
+              }
+              h2 {
+                margin-left: 4px;
+                font-size: 13px;
+                font-weight: 500;
+                color: $middleGray;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+            }
+            .coin {
+              text-indent: 22px;
+              font-size: 12px;
+              color: $middleGray2;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }//swiper_wrap
+  }//mentorList
+}

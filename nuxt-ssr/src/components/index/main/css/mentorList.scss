@@ -1,0 +1,93 @@
+.mentorList_wrap {
+  .title {
+    padding: 0 16px;
+    .title_list_wrap {
+      position: relative;
+      white-space: nowrap;
+      .title_list {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $lightGray;
+        cursor: pointer;
+        &.active {
+          color: $main_font_color;
+          font-weight: 600;
+        }
+        .list_inner {
+          width: 100%;
+          margin-bottom: 5px;
+        }
+      }
+      .activeStick {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        width: 56px;
+        height: 2px;
+        background: $main_font_color;
+        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+    }
+  }
+  .mentorList {
+    margin: 10px 0;
+    .swiper_wrap {
+      width: 100%;
+      .swiper {
+        width: 100%;
+        animation: opacity 0.5s ease-in-out;
+        padding: 0 16px;
+        white-space: nowrap;
+        overflow-x: auto;
+        font-size: 0;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .inner {
+          display: inline-block;
+          width: 20%;
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 16px;
+          }
+          a {
+            display: block;
+            .mentorImg {
+              border-radius: 50%;
+              overflow: hidden;
+              img {
+                display: block;
+                width: 100%;
+              }
+            }
+            h2 {
+              margin-top: 5px;
+              text-align: center;
+              font-size: 11px;
+              font-weight: 500;
+              color: $middleGray;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+          }
+          
+        }
+      }
+      .nonSwiperItems {
+        padding: 40px;
+        background: $backgroundColor;
+        h2 {
+          text-align: center;
+          font-weight: 400;
+          font-size: 15px;
+          color: $lightGray;
+        }
+      }
+    }//swiper_wrap
+  }//mentorList
+}
