@@ -21,10 +21,13 @@ TradingView 라이브러리가 표출되는 페이지
 - Dockerfile
 React에 Next.js가 있다면 Vue에는 Nuxt.js가 있습니다. Next.js와 같이 서버에서 관리해줄 필요가 있습니다. 환경변수와 build 그리고 실행까지의 과정이 담겨 있습니다.
 
+## Nuxt-SSR 폴더
+- javascript, Nuxt2, Vue2로 메인 페이지를 Server Side Render로 개발했습니다.
 
 ## Spring API 폴더
 
 - 프로젝트에서 유저 회원가입/로그인 기능이 담겨있습니다. 로그인 방식은 세션 방식입니다.
+- Nuxt 폴더에서 언급되었던 TradingView 라이브러리의 API입니다. TradingView 라이브러리 측의 조건에 맞춰 개발되었습니다.
 
 ## Spring Scheduler 폴더
 
